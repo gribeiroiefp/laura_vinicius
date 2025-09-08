@@ -95,4 +95,4 @@ $autores = mysqli_query($conn, "
 </body>
 </html>
 
-<?php mysqli_close($conn); ?>
+<?php mysqli_close($conn); // Aguardando feedback do Guilherme. ?>
