@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../css/styles.css">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <h1 class="col-4">IMDb2</h1>
+                <nav class="col text-end">
+                    <a href="index.html">Página inicial</a>
+                    <a href="pesquisa.html">Pesquisa</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container-lg inserir">
+        <h2>Inserir Novo Ator</h2>
+        <form action="inserir_filme.php" method="POST" enctype="multipart/form-data" class="mb-5 inserir">
+            <input type="text" name="titulo" placeholder="Título" required class="form-control mb-3" />
+            <textarea name="descricao" placeholder="Descrição" required class="form-control mb-3"></textarea>
+            <input type="number" name="ano" placeholder="Ano" required min="1888" max="2099" step="1" class="form-control mb-3" />
+            <input type="text" name="diretor" placeholder="Diretor" required class="form-control mb-3" />
+            <label for="poster" class="form-label">Poster do filme (imagem):</label>
+            <input type="file" name="poster" id="poster" accept="image/*" required class="form-control mb-3" />
+            <button type="submit" class="btn btn-primary">Inserir Filme</button>
+        </form>
+        <div class="editar">
+            <h2>Opções</h2>
+            <a href="inserir_filme.html" class="btn btn-primary">Inserir Filme</a>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <div class="container-lg">
+            <p>&copy; 2025 IMDb2.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
