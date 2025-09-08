@@ -5,10 +5,8 @@ if (!$conn) {
     die('Erro na ligação: ' . mysqli_connect_error());
 }
 
-// Buscar 3 livros mais recentes
 $livros = mysqli_query($conn, "SELECT id, titulo, ano, capa FROM livros ORDER BY ano DESC LIMIT 3");
 
-// Buscar 3 autores com mais livros
 $autores = mysqli_query($conn, "
     SELECT autores.id, autores.nome, autores.foto, autores.nacionalidade, COUNT(autor_livro.livro_id) AS total
     FROM autores
@@ -95,4 +93,4 @@ $autores = mysqli_query($conn, "
 </body>
 </html>
 
-<?php mysqli_close($conn); // Aguardando feedback do Guilherme. ?>
+<?php mysqli_close($conn); ?>
